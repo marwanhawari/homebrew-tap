@@ -11,7 +11,7 @@ class Stew < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/marwanhawari/stew/releases/download/v0.4.0/stew-v0.4.0-darwin-amd64.tar.gz"
-      sha256 "4ae09ef2f882eb2c6590fda6de077f09eae31b7ded52f3efc30ff96dc235be0b"
+      sha256 "eb6ca5321867b4af5595ab36ef4f27fb7eb068b0849b22a8d05d3cff0ccf3c30"
 
       def install
         bin.install "stew"
@@ -19,7 +19,7 @@ class Stew < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/marwanhawari/stew/releases/download/v0.4.0/stew-v0.4.0-darwin-arm64.tar.gz"
-      sha256 "703a8b149f23bb34b6662db3802101cdfb804bba9374613f13d68619e6fccb4e"
+      sha256 "cb44410bdd18089512a5adf55f8ec2c411e54bf981e3d513cfab7c7c85f2d475"
 
       def install
         bin.install "stew"
@@ -30,7 +30,7 @@ class Stew < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/marwanhawari/stew/releases/download/v0.4.0/stew-v0.4.0-linux-amd64.tar.gz"
-      sha256 "cc2ea6a966a9df2516011ac297e1c6a7964cd990b899165dc01e1a13cbcf24dd"
+      sha256 "2cd5d31fcf8b1999e46e6c4144ab9cdab9cb75c36b9e07a97fb2a6df8ea0e356"
 
       def install
         bin.install "stew"
@@ -38,7 +38,7 @@ class Stew < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/marwanhawari/stew/releases/download/v0.4.0/stew-v0.4.0-linux-arm64.tar.gz"
-      sha256 "ac505ee039eb2020663bbde2c81c8bd6b3290db79f91a2c48138a21cecda958f"
+      sha256 "b790b04fa571b07918d213b6d0a4babc5af059ae3cefa074ba357e102986900f"
 
       def install
         bin.install "stew"
