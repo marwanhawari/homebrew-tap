@@ -5,43 +5,43 @@
 class Stew < Formula
   desc "An independent package manager for compiled binaries"
   homepage "https://github.com/marwanhawari/stew"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/marwanhawari/stew/releases/download/v0.3.0/stew-darwin-arm64"
-      sha256 "95a9d6a7cc2ab5b9e92b8e0bac646139bee42e1ed91b61b8ae1389fdd92405da"
+    if Hardware::CPU.intel?
+      url "https://github.com/marwanhawari/stew/releases/download/v0.4.0/stew-v0.4.0-darwin-amd64.tar.gz"
+      sha256 "4ae09ef2f882eb2c6590fda6de077f09eae31b7ded52f3efc30ff96dc235be0b"
 
       def install
-        bin.install "stew-darwin-arm64" => "stew"
+        bin.install "stew"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/marwanhawari/stew/releases/download/v0.3.0/stew-darwin-amd64"
-      sha256 "04216cf6b326ebc973fdad003f015e30e9c04f810e25f7dd6fa9f0756894385d"
+    if Hardware::CPU.arm?
+      url "https://github.com/marwanhawari/stew/releases/download/v0.4.0/stew-v0.4.0-darwin-arm64.tar.gz"
+      sha256 "703a8b149f23bb34b6662db3802101cdfb804bba9374613f13d68619e6fccb4e"
 
       def install
-        bin.install "stew-darwin-amd64" => "stew"
+        bin.install "stew"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/marwanhawari/stew/releases/download/v0.3.0/stew-linux-amd64"
-      sha256 "e64548f83ef34a6c7267d6edfbd0b913e3ee0436cd6fd39a218a3196cf54c0c9"
+      url "https://github.com/marwanhawari/stew/releases/download/v0.4.0/stew-v0.4.0-linux-amd64.tar.gz"
+      sha256 "cc2ea6a966a9df2516011ac297e1c6a7964cd990b899165dc01e1a13cbcf24dd"
 
       def install
-        bin.install "stew-linux-amd64" => "stew"
+        bin.install "stew"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/marwanhawari/stew/releases/download/v0.3.0/stew-linux-arm64"
-      sha256 "0ee8c875a235c37b40c653456976af2c42e02f8450f2722274fa247ad1584b6c"
+      url "https://github.com/marwanhawari/stew/releases/download/v0.4.0/stew-v0.4.0-linux-arm64.tar.gz"
+      sha256 "ac505ee039eb2020663bbde2c81c8bd6b3290db79f91a2c48138a21cecda958f"
 
       def install
-        bin.install "stew-linux-arm64" => "stew"
+        bin.install "stew"
       end
     end
   end
